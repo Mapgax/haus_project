@@ -63,14 +63,296 @@ ntfy:
 # before re-enabling.
 sources:
   # Regionale Makler zuerst
-  - name: "Your Immobilien Markler"
+  - name: "Bocelli Immobilien"
     enabled: true
     # Objects live on the /kauf/ subpage under /detailseite/…; the site
     # canonical host is www., which the host check must match.
-    url_buy: "https://www.your_immobilien_markler.com/immobilien/kauf/"
+    url_buy: "https://www.bocelli-immobilien.ch/immobilien/kauf/"
     url_rent: null
     listing_link_keywords: ["/detailseite/"]
 
+  - name: "Lebenswerk Immobilien"
+    # Domain www.lebenswerk-immobilien.ch no longer resolves; superseded
+    # by "Lebenswerk (neu)" below.
+    enabled: false
+    url_buy: "https://www.lebenswerk-immobilien.ch/angebote/"
+    url_rent: "https://www.lebenswerk-immobilien.ch/angebote/"
+    listing_link_keywords: ["/angebote/", "/objekt", "/angebot", "/immobilien/"]
+
+  - name: "RT Immobilien Treuhand"
+    # rt-immo.ch is a French-speaking agency in Romandie (no Kreuzlingen
+    # portfolio); the old /immobilien/ URL 404s.
+    enabled: false
+    url_buy: "https://www.rt-immo.ch/immobilien/"
+    url_rent: "https://www.rt-immo.ch/immobilien/"
+    listing_link_keywords: ["/immobilien/", "/objekt", "/angebot", "/details/"]
+
+  - name: "RE/MAX Kreuzlingen"
+    # JavaScript app, returns an empty shell (HTTP 298) to plain clients.
+    enabled: false
+    url_buy: "https://remax.ch/de/immobilien-kaufen"
+    url_rent: "https://remax.ch/de/immobilien-mieten"
+    listing_link_keywords: ["/objekt/", "/immobilien/"]
+
+  - name: "Kramer Immobilien"
+    # /aktuelle-objekte/ loads its objects via JavaScript; no server-side
+    # detail links to follow.
+    enabled: false
+    url_buy: "https://kramer-immo.ch/aktuelle-objekte/"
+    url_rent: "https://kramer-immo.ch/aktuelle-objekte/"
+    listing_link_keywords: ["/immobilien/", "/objekt", "/angebot", "/referenz/"]
+
+  - name: "Immolang"
+    enabled: true
+    # Detail pages are flat .html files without a path prefix
+    # (e.g. id-5-1-2-zimmer-einfamilienhaus-kreuzlingen.html).
+    url_buy: "https://immolang.ch/immobilien.html"
+    url_rent: "https://immolang.ch/immobilien.html"
+    listing_link_keywords: ["zimmer", "einfamilienhaus", "wohnung", "villa", "neubauprojekt"]
+
+  - name: "Lebenswerk (neu)"
+    enabled: true
+    url_buy: "https://www.lebenswerk.immo/immobilien/"
+    url_rent: "https://www.lebenswerk.immo/immobilien/"
+    listing_link_keywords: ["/immobilien/", "/objekt", "/angebot", "/objekte/"]
+
+  - name: "Wanner Immobilien"
+    enabled: true
+    url_buy: "https://wanner-immo.ch/immobilien/"
+    url_rent: "https://wanner-immo.ch/immobilien/"
+    listing_link_keywords: ["/immobilien/", "/objekt", "/angebot", "/detail/"]
+
+  # Casasoft-Widgets (Hueppin, Immokanzlei, VESAG): availabilities immer auf
+  # "active" pinnen — "taken"/"reserved" laedt verkaufte Objekte mit, deren
+  # einziger "Verkauft"-Hinweis ein ins Titelbild gebranntes Banner ist
+  # (Beispiel: Hueppin 1671998, Bottighofen). Die OCR-Pruefung (imagecheck.py)
+  # faengt Nachzuegler ab, die Quelle soll sie aber gar nicht erst liefern.
+  - name: "Hueppin Immobilien"
+    enabled: true
+    url_buy: "https://hueppin-immobilien.ch/immobilien/?availabilities%5B%5D=active&salestypes%5B%5D=buy"
+    url_rent: "https://hueppin-immobilien.ch/immobilien/?availabilities%5B%5D=active&salestypes%5B%5D=rent"
+    listing_link_keywords: ["/immobilien/", "/objekt", "/angebot", "/listing/"]
+
+  - name: "Goldinger"
+    enabled: true
+    url_buy: "https://www.goldinger.ch"
+    url_rent: "https://www.goldinger.ch"
+    listing_link_keywords: ["/immobilien/", "/objekt", "/angebot", "/angebote", "/detail/"]
+
+  - name: "Raumteam"
+    enabled: true
+    url_buy: "https://www.raumteam.ch/angebot/"
+    url_rent: "https://www.raumteam.ch/angebot/"
+    listing_link_keywords: ["/angebot/", "/objekt", "/angebote", "/immobilien/"]
+
+  - name: "Fleischmann Immobilien"
+    enabled: true
+    url_buy: "https://www.fleischmann.ch/immobilien-kaufen.html"
+    url_rent: "https://www.fleischmann.ch/immobilien-kaufen.html"
+    listing_link_keywords: ["/immobilien", "/objekt", "/angebot", "/immobilien-kaufen"]
+
+  - name: "Immokanzlei"
+    enabled: true
+    # Casasoft widget: object links look like /immobilien/1762845de-….
+    url_buy: "https://immokanzlei.ch/immobilien/?availabilities%5B%5D=active&salestypes%5B%5D=buy"
+    url_rent: "https://immokanzlei.ch/immobilien/?availabilities%5B%5D=active&salestypes%5B%5D=rent"
+    listing_link_keywords: ["/immobilien/1"]
+
+  - name: "AFORIA Immobilien"
+    enabled: true
+    url_buy: "https://aforia.ch/immobilien-overview/filter=kaufobjekt/"
+    url_rent: "https://aforia.ch/immobilien-overview/filter=mietobjekt/"
+    listing_link_keywords: ["/immobilien-offen/"]
+
+  - name: "Immoroom"
+    enabled: true
+    url_buy: "https://www.immoroom.ch/Immobilienverkauf"
+    url_rent: "https://www.immoroom.ch/Mietobjekte"
+    listing_link_keywords: ["/Immobilienverkauf/", "/Mietobjekte/"]
+
+  - name: "Retronova Immobilien"
+    enabled: true
+    url_buy: "https://retronova.ch/immobilienangebote/"
+    url_rent: "https://retronova.ch/immobilienangebote/"
+    listing_link_keywords: ["/Immobilie/"]
+
+  - name: "Sutter Immobilien"
+    enabled: true
+    url_buy: "https://www.sutterimmobilien.com/properties-1"
+    url_rent: null
+    listing_link_keywords: ["/properties-1/"]
+
+  - name: "VESAG Immobilien"
+    # Casasoft widget rendered via JavaScript; no server-side object links.
+    enabled: false
+    url_buy: "https://vesag.ch/immobilien/"
+    url_rent: "https://vesag.ch/immobilien/"
+    listing_link_keywords: ["/immobilien/", "/objekt", "/angebot"]
+
+  # Dann Portale
+  - name: "Homegate"
+    # HTTP 403 bot protection (even with browser user agent).
+    enabled: false
+    url_buy: "https://www.homegate.ch/kaufen/immobilien/ort-kreuzlingen/trefferliste"
+    url_rent: "https://www.homegate.ch/mieten/immobilien/ort-kreuzlingen/trefferliste"
+    listing_link_keywords: ["/mieten/", "/kaufen/", "/de/"]
+    max_links_per_source: 35
+
+  - name: "ImmoScout24"
+    # HTTP 403 bot protection. Its inventory is reachable via the
+    # server-rendered satellite immostreet.ch below.
+    enabled: false
+    url_buy: "https://www.immoscout24.ch/de/immobilien/kaufen/ort-kreuzlingen"
+    url_rent: "https://www.immoscout24.ch/de/immobilien/mieten/ort-kreuzlingen"
+    listing_link_keywords: ["/de/d/", "/immobilien/"]
+    max_links_per_source: 35
+
+  - name: "newhome"
+    # HTTP 403 bot protection.
+    enabled: false
+    url_buy: "https://www.newhome.ch/de/kaufen/immobilien/kreuzlingen"
+    url_rent: "https://www.newhome.ch/de/mieten/immobilien/kreuzlingen"
+    listing_link_keywords: ["/de/immobilie/", "/de/wohnung/", "/de/haus/"]
+    max_links_per_source: 35
+
+  - name: "Comparis"
+    # HTTP 403/404 bot protection.
+    enabled: false
+    url_buy: "https://www.comparis.ch/immobilien/marktplatz/kaufen/ort-kreuzlingen"
+    url_rent: "https://www.comparis.ch/immobilien/marktplatz/mieten/ort-kreuzlingen"
+    listing_link_keywords: ["/immobilien/", "/kaufen/", "/mieten/"]
+    max_links_per_source: 30
+
+  - name: "RealAdvisor"
+    enabled: true
+    url_buy: "https://realadvisor.ch/de/kaufen/8280-kreuzlingen"
+    url_rent: "https://realadvisor.ch/de/mieten/8280-kreuzlingen"
+    listing_link_keywords: ["/de/kaufen/wohnung/", "/de/kaufen/haus/", "/de/kaufen/gebaude/", "/de/mieten/wohnung/", "/de/mieten/haus/"]
+    max_links_per_source: 35
+
+  - name: "RealAdvisor Tägerwilen"
+    enabled: true
+    url_buy: "https://realadvisor.ch/de/kaufen/8274-tagerwilen"
+    url_rent: "https://realadvisor.ch/de/mieten/8274-tagerwilen"
+    listing_link_keywords: ["/de/kaufen/wohnung/", "/de/kaufen/haus/", "/de/kaufen/gebaude/", "/de/mieten/wohnung/", "/de/mieten/haus/"]
+    max_links_per_source: 35
+
+  - name: "RealAdvisor Bottighofen"
+    enabled: true
+    url_buy: "https://realadvisor.ch/de/kaufen/8598-bottighofen"
+    url_rent: "https://realadvisor.ch/de/mieten/8598-bottighofen"
+    listing_link_keywords: ["/de/kaufen/wohnung/", "/de/kaufen/haus/", "/de/kaufen/gebaude/", "/de/mieten/wohnung/", "/de/mieten/haus/"]
+    max_links_per_source: 35
+
+  # ImmoScout24 satellite: server-rendered result cards with full data and
+  # exact coordinates; parsed directly (detail links point at the blocked
+  # immoscout24.ch).
+  - name: "ImmoStreet Kreuzlingen"
+    enabled: true
+    url_buy: "https://www.immostreet.ch/de/kaufen/wohnung-und-haus/in-8280"
+    url_rent: "https://www.immostreet.ch/de/mieten/wohnung-und-haus/in-8280"
+    listing_link_keywords: ["/kaufen/", "/mieten/"]
+    max_links_per_source: 60
+
+  - name: "ImmoStreet Tägerwilen"
+    enabled: true
+    url_buy: "https://www.immostreet.ch/de/kaufen/wohnung-und-haus/in-8274"
+    url_rent: "https://www.immostreet.ch/de/mieten/wohnung-und-haus/in-8274"
+    listing_link_keywords: ["/kaufen/", "/mieten/"]
+    max_links_per_source: 60
+
+  - name: "ImmoStreet Bottighofen"
+    enabled: true
+    url_buy: "https://www.immostreet.ch/de/kaufen/wohnung-und-haus/in-8598"
+    url_rent: "https://www.immostreet.ch/de/mieten/wohnung-und-haus/in-8598"
+    listing_link_keywords: ["/kaufen/", "/mieten/"]
+    max_links_per_source: 60
+
+  - name: "Neubauprojekte Premium"
+    enabled: false
+    url_buy: "https://www.neubauprojekte.ch/premium-abo/#premiumAbonnement"
+    url_rent: null
+    listing_link_keywords: ["/projekt", "/immobilien", "/angebot"]
+
+  - name: "ImmoSky"
+    # JavaScript search app; no server-side object links.
+    enabled: false
+    url_buy: "https://www.immosky.ch/de/"
+    url_rent: "https://www.immosky.ch/de/"
+    listing_link_keywords: ["/objekt", "/immobilien", "/angebot", "/objekte/"]
+
+  - name: "ImmoLeague"
+    enabled: true
+    url_buy: "https://immoleague.ch/kaufen/?deal=SALE&municipality=8280&zip=&radius=0&c=2&r=5&priceMin=0&priceMax=2100000&s=date_publication&so=DESC&sc=true"
+    url_rent: "https://immoleague.ch"
+    listing_link_keywords: ["/objekt", "/kaufen", "/mieten", "/angebot", "/listing/"]
+
+  - name: "Property Owner"
+    enabled: true
+    url_buy: "https://www.propertyowner.ch/de/immobilien/"
+    url_rent: "https://www.propertyowner.ch/de/immobilien/"
+    listing_link_keywords: ["/immobilien/", "/objekt", "/angebot", "/details/"]
+
+  # --- Niederlande: Katwijk / Rijnsburg / Valkenburg (ZH) --------------------
+  # funda.nl ist bot-geblockt (Akamai), pararius blockt Datacenter-IPs —
+  # deshalb wie in Kreuzlingen die lokalen Makler direkt. Alle Eintraege sind
+  # Audit-Stand Probe-Lauf #63 (2026-07-13): Huislijn (40 raw), Kooitje (25),
+  # Geurts (40), Van Duijn (15), Makelaars aan Zee (29) und Hoevens (11, 1
+  # Treffer) funktionieren — 0 kept heisst nur: aktuell keine passenden
+  # Wasserlage-Objekte. Van der Meer und De Raad sind nach zwei URL-Versuchen
+  # weiterhin 404 und deshalb deaktiviert.
+  - name: "Van der Meer Makelaars"
+    # /aanbod/ und /woningaanbod/ beide 404 (Probe-Laeufe #62/#63); Aufbau
+    # der Site unklar -> deaktiviert bis jemand die echte Aanbod-URL prueft.
+    enabled: false
+    region: "nl"
+    url_buy: "https://www.vandermeermakelaars.nl/woningaanbod/"
+    url_rent: null
+    listing_link_keywords: ["/aanbod/", "/woning", "/object"]
+
+  - name: "Van Duijn Makelaardij"
+    enabled: true
+    region: "nl"
+    url_buy: "https://vanduijnmakelaardij.nl/aanbod/"
+    url_rent: null
+    listing_link_keywords: ["/aanbod/", "/woning", "/object"]
+
+  - name: "De Raad Makelaars"
+    # /aanbod/ und /woningaanbod/ beide 404 (Probe-Laeufe #62/#63); Aufbau
+    # der Site unklar -> deaktiviert bis jemand die echte Aanbod-URL prueft.
+    enabled: false
+    region: "nl"
+    url_buy: "https://www.deraadmakelaars.nl/woningaanbod/"
+    url_rent: null
+    listing_link_keywords: ["/aanbod/", "/woning", "/object"]
+
+  - name: "Kooitje Makelaarsdiensten"
+    enabled: true
+    region: "nl"
+    url_buy: "https://www.kooitjemakelaarsdiensten.nl/woningaanbod/koop"
+    url_rent: null
+    listing_link_keywords: ["/woningaanbod/", "/woning", "/object"]
+
+  - name: "Makelaars aan Zee"
+    enabled: true
+    region: "nl"
+    url_buy: "https://www.makelaarsaanzee.nl/woningaanbod/"
+    url_rent: null
+    listing_link_keywords: ["/aanbod/", "/woning", "/object"]
+
+  - name: "Hoevens Makelaardij"
+    enabled: true
+    region: "nl"
+    url_buy: "https://www.hoevensmakelaardij.nl/woningaanbod/"
+    url_rent: null
+    listing_link_keywords: ["/aanbod/", "/woning", "/object"]
+
+  - name: "Geurts Makelaars"
+    enabled: true
+    region: "nl"
+    url_buy: "https://geurtsmakelaars.nl/woningaanbod/"
+    url_rent: null
+    listing_link_keywords: ["/woningaanbod/", "/woning", "/object"]
 
   # Aggregator-Probe; Detailseiten liegen auf huislijn.nl selbst.
   - name: "Huislijn Katwijk"
