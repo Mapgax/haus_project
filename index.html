@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hausfinder Kreuzlingen</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow" id="eyebrow">Kaufobjekte rund um Kreuzlingen</p>
+      <h1>Hausfinder</h1>
+    </div>
+    <nav class="section-nav" aria-label="Objektart">
+      <a href="/" data-mode-link="buy">Kaufen <span class="nav-badge" data-badge="buy" hidden></span></a>
+      <a href="/mieten" data-mode-link="rent">Mieten <span class="nav-badge" data-badge="rent" hidden></span></a>
+      <a href="/niederlande" data-mode-link="nl">Katwijk (NL) <span class="nav-badge" data-badge="nl" hidden></span></a>
+    </nav>
+    <div class="sync">
+      <span id="updatedAt">Daten werden geladen</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="map-panel" aria-label="Geografische Visualisierung">
+      <div class="map-head">
+        <div>
+          <h2 id="mapHeading">Lage zum Referenzpunkt</h2>
+          <p>OpenStreetMap-Karte; Marker basieren auf Inseratskoordinaten oder Adresshinweisen.</p>
+        </div>
+        <button class="icon-button" id="resetSelection" type="button" title="Auswahl zurücksetzen">↺</button>
+      </div>
+      <div class="geo-wrap">
+        <div id="geoMap" class="geo-map" role="img" aria-label="Objekte auf einer OpenStreetMap-Karte"></div>
+      </div>
+      <div class="legend">
+        <span data-ch-only><i class="dot affordable"></i> bis Preislimit</span>
+        <span data-ch-only><i class="dot inquiry"></i> Auf Anfrage / darüber</span>
+        <span data-nl-only hidden><i class="dot nl-preferred"></i> Wunsch-Strasse</span>
+        <span data-nl-only hidden><i class="dot nl-water"></i> Wasserlage (Steiger/Keyword)</span>
+        <label class="legend-toggle" data-ch-only>
+          <input id="schoolToggle" type="checkbox" checked>
+          Primarschulen
+        </label>
+        <label class="legend-toggle" data-nl-only hidden>
+          <input id="nlStreetToggle" type="checkbox" checked>
+          Wunsch-Strassen
+        </label>
+      </div>
+      <div class="legend schools-legend" data-ch-only>
+        <span><i class="dot" style="background:#315c86"></i> Schreiber (Zentrum/West)</span>
+        <span><i class="dot" style="background:#a16010"></i> Wehrli (Zentrum-Ost)</span>
+        <span><i class="dot" style="background:#6b3fa0"></i> Seetal (Ost/Kurzrickenbach)</span>
+        <span><i class="dot" style="background:#176f63"></i> Bernegg (Süd)</span>
+        <span><i class="dot" style="background:#c0392b"></i> VSG Tägerwilen</span>
+        <span><i class="dot" style="background:#b5176b"></i> Primarschule Bottighofen</span>
+        <span><i class="dot unclear-zone"></i> Grenzgebiet (unklar)</span>
+      </div>
+      <p class="legend-note" data-ch-only>Schul-Einzugsgebiete sind ungefähr und basieren auf Gehzeit zu Fuss (≈9 min) entlang des Strassennetzes – keine offiziellen Grenzen. Farbiger Kern = nur von einer Schule erreichbar; graues Grenzgebiet = von mehreren Schulen erreichbar und wechselt je nach Jahrgang.</p>
+    </section>
+
+    <section class="results-panel">
+      <div class="controls">
+        <div class="summary">
+          <span id="resultCount">0 Objekte</span>
+          <strong id="closestLabel">-</strong>
+          <span id="medianLabel"></span>
+        </div>
+        <label class="switch" id="priceSwitch">
+          <input id="priceToggle" type="checkbox" checked>
+          <span class="slider"></span>
+          <span class="switch-text" id="priceToggleLabel">Preisfilter</span>
+        </label>
+      </div>
+
+      <div class="filter-note" id="filterNote"></div>
+      <div id="results" class="results" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+name: Scrape property listings
+
+on:
+  workflow_dispatch:
+    inputs:
+      probe:
+        description: "Probe/Dry-Run: kein Commit, keine ntfy-Pushes; Artefakt mit listings.json + Scrape-Report"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "17 17 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape-property-listings
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    # Der OCR-Check macht seit 2026-07-16 einen Grauwert-Pass zusätzlich zu
+    # den Schwellwert-Rotationen (~20% mehr Tesseract-Zeit); Lauf #67 lag
+    # schon bei ~23 Minuten.
+    timeout-minutes: 40
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tesseract OCR
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-deu tesseract-ocr-nld
+
+      - name: Install package
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -e .
+
+      - name: Prepare config
+        run: cp config/config.example.yaml config/config.yaml
+
+      # Probe mode still writes to Supabase and marks fingerprints as seen.
+      # That is intentional: the first probe run pre-seeds seen_listings for
+      # newly added sources, so enabling them never floods ntfy afterwards.
+      - name: Scrape and export
+        # Explicit bash shell enables pipefail, otherwise `| tee` would
+        # swallow a failing scraper exit code.
+        # PUBLIC REPO: do NOT add HAUS_REF_* / HAUS_*_LIMIT_CHF here. The
+        # output below is committed, so anything set would become public.
+        shell: bash
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          PROBE: ${{ inputs.probe == true && '--notify-dry-run' || '' }}
+        run: |
+          PYTHONPATH=src python3 scripts/run_scrape_supabase.py \
+            --config config/config.yaml \
+            --apply-schema \
+            --output assets/listings.json \
+            $PROBE 2>&1 | tee scrape-report.txt
+
+      # Cosmetic map overlay (whitelist street polylines from OSM); the
+      # scrape result does not depend on it, so failures are non-fatal.
+      - name: Generate NL street overlay
+        if: ${{ inputs.probe == true }}
+        continue-on-error: true
+        run: PYTHONPATH=src python3 scripts/generate_nl_streets.py
+
+      - name: Upload probe artifact
+        if: ${{ inputs.probe == true }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: probe-report
+          path: |
+            assets/listings.json
+            assets/nl_streets.geojson
+            scrape-report.txt
+          retention-days: 14
+
+      # On a feature branch, a probe run commits its generated data so the
+      # Vercel preview shows real listings and the street overlay lands in
+      # the repo. Never on main — there only the scheduled path commits.
+      - name: Commit probe artifacts to feature branch
+        if: ${{ inputs.probe == true && github.ref_name != 'main' }}
+        run: |
+          if [ -z "$(git status --porcelain -- assets/listings.json assets/nl_streets.geojson)" ]; then
+            echo "No probe artifact changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/listings.json assets/nl_streets.geojson
+          git commit -m "Probe artifacts: listings.json + nl_streets.geojson"
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: Commit listing update
+        if: ${{ inputs.probe != true }}
+        run: |
+          if git diff --quiet -- assets/listings.json; then
+            echo "No listing changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/listings.json
+          git commit -m "Update property listings"
+          git push origin HEAD:${{ github.ref_name }}
