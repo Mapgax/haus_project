@@ -114,7 +114,10 @@ def send_new_listing_notifications(
 
     if dry_run:
         for payload in payloads:
-            print(f"ntfy dry-run: {json.dumps(payload, ensure_ascii=False)}")
+            # The topic is the only credential of an ntfy topic, and this
+            # output is captured into (public) CI artifacts: never print it.
+            shown = {**payload, "topic": "<redacted>"}
+            print(f"ntfy dry-run: {json.dumps(shown, ensure_ascii=False)}")
         return 0
 
     sent = 0

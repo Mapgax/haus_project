@@ -58,6 +58,17 @@ class SendNotificationsTest(unittest.TestCase):
         self.assertEqual(sent, 0)
         post.assert_not_called()
 
+    def test_dry_run_output_never_contains_the_topic(self, post: mock.Mock) -> None:
+        import contextlib
+        import io
+
+        buffer = io.StringIO()
+        with mock.patch.dict("os.environ", {"NTFY_TOPIC": "secret-topic-123"}):
+            with contextlib.redirect_stdout(buffer):
+                send_new_listing_notifications([_listing()], NtfyConfig(), dry_run=True)
+        self.assertIn("ntfy dry-run", buffer.getvalue())
+        self.assertNotIn("secret-topic-123", buffer.getvalue())
+
     def test_one_message_per_listing(self, post: mock.Mock) -> None:
         items = [_listing(url=f"https://example.com/listing/{i}") for i in range(3)]
         sent = send_new_listing_notifications(items, NtfyConfig())
