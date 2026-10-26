@@ -2,7 +2,9 @@
 
 Property-search scraper + map (RealAdvisor listings, school-catchment overlays for
 Kreuzlingen/Tägerwilen/Bottighofen). **This directory is the git root and the Vercel project root.**
-Deploy: Vercel, static site reading `assets/listings.json`.
+Deploy: Vercel, static site reading `/api/listings` (a function that overlays the private
+settings from the `haus_private_settings` table on `assets/listings.json`; see
+`docs/private_settings.md`), falling back to the static file.
 
 ## Runbook
 

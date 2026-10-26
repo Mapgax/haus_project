@@ -37,5 +37,17 @@ CREATE INDEX IF NOT EXISTS idx_listings_history_fetched_at
 CREATE INDEX IF NOT EXISTS idx_listings_history_category
     ON public.listings_history (category);
 
+-- Personal values (distance reference point, price limits). The public repo and
+-- the daily-committed assets/listings.json carry neutral defaults only; the
+-- Vercel function api/listings.py overlays these at request time. One row, no
+-- public policy: only the owner role and the read-only site role can see it
+-- (see docs/private_settings.md for the role setup).
+CREATE TABLE IF NOT EXISTS public.haus_private_settings (
+    id SMALLINT PRIMARY KEY DEFAULT 1 CHECK (id = 1),
+    settings JSONB NOT NULL DEFAULT '{}'::jsonb,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
 ALTER TABLE public.seen_listings ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.listings_history ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.haus_private_settings ENABLE ROW LEVEL SECURITY;

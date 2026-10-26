@@ -483,9 +483,24 @@ function switchMode(nextMode, pushHistory) {
   render();
 }
 
+// The private overlay endpoint answers first; the committed file is the
+// fallback so the page also works locally and if the function is unavailable.
+async function loadPayload() {
+  try {
+    const response = await fetch("api/listings", { cache: "no-store" });
+    const type = response.headers.get("content-type") || "";
+    if (response.ok && type.includes("application/json")) {
+      return await response.json();
+    }
+  } catch (error) {
+    // fall through to the public file
+  }
+  const fallback = await fetch("assets/listings.json", { cache: "no-store" });
+  return fallback.json();
+}
+
 async function init() {
-  const response = await fetch("assets/listings.json", { cache: "no-store" });
-  payload = await response.json();
+  payload = await loadPayload();
   updatedAt.textContent = `Stand ${formatDate(payload.generatedAt)} · ${payload.source}`;
   priceToggle.addEventListener("change", () => {
     selectedId = null;

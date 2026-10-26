@@ -1,8 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/listings.py": {
+      "includeFiles": "assets/listings.json",
+      "maxDuration": 10
+    }
+  },
   "rewrites": [
     {
-      "source": "/:path*",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]

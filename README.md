@@ -146,6 +146,11 @@ Dieses Repo ist für die Veröffentlichung gedacht. Deshalb gilt:
   CHF 5'000) und nur über Umgebungsvariablen überschreibbar:
   `HAUS_REF_CH_LABEL`, `HAUS_REF_CH_LAT`, `HAUS_REF_CH_LON`,
   `HAUS_BUY_LIMIT_CHF`, `HAUS_RENT_LIMIT_CHF`, `HAUS_SITE_URL` (ntfy-Klick-Ziel).
+- **Die Homepage zeigt trotzdem eure echten Werte:** Sie lädt zuerst
+  `/api/listings`, eine Vercel-Funktion hinter dem Vercel-Login, die die privaten
+  Werte aus der Tabelle `haus_private_settings` über die öffentlichen Daten legt.
+  Fehlt etwas, fällt sie auf die öffentliche Datei zurück. Einrichtung und
+  Befehle: [docs/private_settings.md](docs/private_settings.md).
 - **Nicht in GitHub Actions setzen:** Die Action committed `assets/listings.json`
   ins Repo. Alles, was dort als Env-Variable gesetzt ist, steht danach öffentlich
   in dieser Datei (Referenzpunkt, Limits, daraus berechnete Distanzen). Die
