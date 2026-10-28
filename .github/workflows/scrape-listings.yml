@@ -8,7 +8,10 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: "17 17 * * *"
+    # 4x täglich (UTC): 00:17, 06:17, 12:17, 18:17 = 01/07/13/19 Uhr MEZ
+    # (im Sommer 02/08/14/20 Uhr MESZ). Minute 17 statt :00, weil GitHub
+    # zur vollen Stunde stark verzögert.
+    - cron: "17 0,6,12,18 * * *"
 
 permissions:
   contents: write

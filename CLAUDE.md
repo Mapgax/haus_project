@@ -21,7 +21,7 @@ settings from the `haus_private_settings` table on `assets/listings.json`; see
 
 ## The daily scraper Action — read this before pushing
 
-`.github/workflows/scrape-listings.yml` runs daily at 17:17 UTC, re-scrapes, and — if
+`.github/workflows/scrape-listings.yml` runs 4x daily (00:17, 06:17, 12:17, 18:17 UTC), re-scrapes, and — if
 `assets/listings.json` changed — commits and pushes straight to `main` as
 `github-actions[bot]`. **This has caused a push/rebase conflict on `assets/listings.json`
 in every session that pushed** (`! [rejected] main -> main (fetch first)`, plus at least
