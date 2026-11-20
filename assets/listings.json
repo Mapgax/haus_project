@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T00:54:37.145635+00:00",
+  "generatedAt": "2026-11-20T06:45:39.378957+00:00",
   "source": "supabase",
   "references": {
     "ch": {
@@ -798,39 +798,6 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "3816c16b89b2b315813f0b791b45d53bcc2aad3285ea03e9567b5cee8ee357bd",
-      "category": "buy",
-      "region": "nl",
-      "currency": "EUR",
-      "source": "Van Duijn Makelaardij",
-      "title": "Rijnmond46Katwijk",
-      "propertyType": "Haus",
-      "address": "Katwijk",
-      "locationLabel": "Katwijk",
-      "priceChf": 395000.0,
-      "priceLabel": "€ 395.000",
-      "areaSqm": 77.0,
-      "rooms": 4.0,
-      "url": "https://vanduijnmakelaardij.nl/woningen/rijnmond-46-katwijk-939471fecd80124b234950a04c465935a44802/",
-      "lat": 52.201,
-      "lon": 4.41,
-      "distanceKm": 2.38,
-      "geoPrecision": "locality",
-      "qualityNote": null,
-      "pricePerSqm": 5130,
-      "firstSeen": "2026-10-30T18:38:23.837793+00:00",
-      "waterfront": "aan de rijn",
-      "preferredStreet": false,
-      "bouwjaar": 1957,
-      "conditionPlus": [
-        "instapklaar",
-        "gemoderniseerd"
-      ],
-      "conditionMinus": [],
-      "nlScore": 4,
-      "priceValuation": null
-    },
-    {
       "id": "404dda97a2be6c0e7d39d6a74a8d8c92fd99dc17b62dc0db18e070afcf54c76a",
       "category": "buy",
       "region": "nl",
@@ -1065,7 +1032,7 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "2db5ca42347647e5addc8a7c9d1f9f0ece905e38d35ea0d2452947c687684de0",
+      "id": "362fd9e9aad982111b5acdbebae72f9506ad4b8efbd524d966c5d35533abcd25",
       "category": "rent",
       "region": "ch",
       "currency": "CHF",
@@ -1074,8 +1041,8 @@
       "propertyType": "Wohnung",
       "address": "Wohnung mieten - 8598 Bottighofen Preis auf",
       "locationLabel": "Bottighofen",
-      "priceChf": 3400.0,
-      "priceLabel": "CHF 3'400",
+      "priceChf": 1620.0,
+      "priceLabel": "CHF 1'620",
       "areaSqm": 259.0,
       "rooms": 5.5,
       "url": "https://realadvisor.ch/de/mieten/wohnung/8598-bottighofen-VBG4-O6JW",
@@ -1084,8 +1051,8 @@
       "distanceKm": 2.23,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 13,
-      "firstSeen": "2026-11-20T00:53:59.764822+00:00",
+      "pricePerSqm": 6,
+      "firstSeen": "2026-11-20T06:45:04.604670+00:00",
       "priceValuation": "guenstig"
     },
     {
@@ -1179,7 +1146,7 @@
       "lon": 9.132616,
       "distanceKm": 3.74,
       "geoPrecision": "listing-geo",
-      "qualityNote": "Preis auf Anfrage im Quelltext",
+      "qualityNote": null,
       "pricePerSqm": 20,
       "firstSeen": "2026-09-25T20:48:30.383852+00:00",
       "priceValuation": "mittel"
