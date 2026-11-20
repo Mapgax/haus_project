@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T18:38:53.890463+00:00",
+  "generatedAt": "2026-11-20T00:54:37.145635+00:00",
   "source": "supabase",
   "references": {
     "ch": {
@@ -49,7 +49,7 @@
     },
     "rent": {
       "medianPpsqm": 22,
-      "count": 9
+      "count": 10
     }
   },
   "listings": [
@@ -438,30 +438,6 @@
       "priceValuation": null
     },
     {
-      "id": "e3bb02d5dbfd1aa1065c33e8cceb6e5d9e63ca7208c60270faf06ae6a913e226",
-      "category": "buy",
-      "region": "ch",
-      "currency": "CHF",
-      "source": "RealAdvisor Bottighofen",
-      "title": "Moderne Villa mit Seezugang",
-      "propertyType": "Haus",
-      "address": "Villa kaufen - 8598 Bottighofen Preis auf",
-      "locationLabel": "Bottighofen",
-      "priceChf": 840000.0,
-      "priceLabel": "CHF 840'000",
-      "areaSqm": 427.0,
-      "rooms": 5.5,
-      "url": "https://realadvisor.ch/de/kaufen/haus/8598-bottighofen-PMG2-WRA5",
-      "lat": 47.6394,
-      "lon": 9.2086,
-      "distanceKm": 2.23,
-      "geoPrecision": "locality",
-      "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 1967,
-      "firstSeen": "2026-11-17T18:35:08.593264+00:00",
-      "priceValuation": "guenstig"
-    },
-    {
       "id": "1787a7bf64595bd6652ff09766cbd03b88337675761d7d77db5f967dbb2a695d",
       "category": "buy",
       "region": "ch",
@@ -482,6 +458,30 @@
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
       "pricePerSqm": 3231,
+      "firstSeen": "2026-11-17T18:35:08.593264+00:00",
+      "priceValuation": "guenstig"
+    },
+    {
+      "id": "e3bb02d5dbfd1aa1065c33e8cceb6e5d9e63ca7208c60270faf06ae6a913e226",
+      "category": "buy",
+      "region": "ch",
+      "currency": "CHF",
+      "source": "RealAdvisor Bottighofen",
+      "title": "Moderne Villa mit Seezugang",
+      "propertyType": "Haus",
+      "address": "Villa kaufen - 8598 Bottighofen Preis auf",
+      "locationLabel": "Bottighofen",
+      "priceChf": 840000.0,
+      "priceLabel": "CHF 840'000",
+      "areaSqm": 427.0,
+      "rooms": 5.5,
+      "url": "https://realadvisor.ch/de/kaufen/haus/8598-bottighofen-PMG2-WRA5",
+      "lat": 47.6394,
+      "lon": 9.2086,
+      "distanceKm": 2.23,
+      "geoPrecision": "locality",
+      "qualityNote": "Preis auf Anfrage im Quelltext",
+      "pricePerSqm": 1967,
       "firstSeen": "2026-11-17T18:35:08.593264+00:00",
       "priceValuation": "guenstig"
     },
@@ -750,27 +750,27 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "3860769b8b491c362b3116c908e197711be06b5fdc01814c662409eb099a8d2b",
+      "id": "a25d8441d9780ed35374770e9af312150dbdf24651e2ee668e86a6bd6b2d7c00",
       "category": "buy",
       "region": "ch",
       "currency": "CHF",
       "source": "Lebenswerk (neu)",
       "title": "Viel Platz. Wenig Aufwand. Familienwohnen im Wigärtli, Tägerwilen TG",
-      "propertyType": "Haus",
-      "address": "Wigärtli, Tägerwilen TG 8274 Tägerwilen, Reihenmittelhaus zum",
+      "propertyType": "Wohnung",
+      "address": "Wigärtli, Tägerwilen TG 8274 Tägerwilen, Maisonettewohnung zum",
       "locationLabel": "Tägerwilen",
       "priceChf": null,
       "priceLabel": "Auf Anfrage",
       "areaSqm": 172.0,
       "rooms": 5.5,
-      "url": "https://www.lebenswerk.immo/immobilien/haus-reihenmittelhaus-in-taegerwilen-kaufen-585-1/",
+      "url": "https://www.lebenswerk.immo/immobilien/wohnung-eigentumswohnung-maisonettewohnung-in-taegerwilen-kaufen-614/",
       "lat": 47.6564,
       "lon": 9.1311,
       "distanceKm": 3.88,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage oder nicht sauber extrahiert",
       "pricePerSqm": null,
-      "firstSeen": "2026-11-05T12:43:24.784181+00:00",
+      "firstSeen": "2026-10-28T18:46:02.630551+00:00",
       "priceValuation": null
     },
     {
@@ -1065,7 +1065,7 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "8639dff3b37077a2871a53bcf3af7a793be33f7aaf367aa08211115b87d25372",
+      "id": "2db5ca42347647e5addc8a7c9d1f9f0ece905e38d35ea0d2452947c687684de0",
       "category": "rent",
       "region": "ch",
       "currency": "CHF",
@@ -1074,8 +1074,8 @@
       "propertyType": "Wohnung",
       "address": "Wohnung mieten - 8598 Bottighofen Preis auf",
       "locationLabel": "Bottighofen",
-      "priceChf": 3845.0,
-      "priceLabel": "CHF 3'845",
+      "priceChf": 3400.0,
+      "priceLabel": "CHF 3'400",
       "areaSqm": 259.0,
       "rooms": 5.5,
       "url": "https://realadvisor.ch/de/mieten/wohnung/8598-bottighofen-VBG4-O6JW",
@@ -1084,8 +1084,8 @@
       "distanceKm": 2.23,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 15,
-      "firstSeen": "2026-11-19T18:38:25.385971+00:00",
+      "pricePerSqm": 13,
+      "firstSeen": "2026-11-20T00:53:59.764822+00:00",
       "priceValuation": "guenstig"
     },
     {
@@ -1158,6 +1158,30 @@
       "qualityNote": null,
       "pricePerSqm": 21,
       "firstSeen": "2026-10-21T07:50:40.274613+00:00",
+      "priceValuation": "mittel"
+    },
+    {
+      "id": "6e84b7a48d6ccbf753ebf54c46fcdfa5d156c326c14b183c7db5b775e631da05",
+      "category": "rent",
+      "region": "ch",
+      "currency": "CHF",
+      "source": "RealAdvisor Tägerwilen",
+      "title": "Modernes Duplex im Dorf",
+      "propertyType": "Wohnung",
+      "address": "Rickstrasse 1a, 8274 Tägerwilen",
+      "locationLabel": "Inseratskoordinaten",
+      "priceChf": 3150.0,
+      "priceLabel": "CHF 3'150",
+      "areaSqm": 160.3,
+      "rooms": 5.5,
+      "url": "https://realadvisor.ch/de/mieten/wohnung/1a-rickstrasse-8274-tagerwilen-83JB-RQ74",
+      "lat": 47.655679,
+      "lon": 9.132616,
+      "distanceKm": 3.74,
+      "geoPrecision": "listing-geo",
+      "qualityNote": "Preis auf Anfrage im Quelltext",
+      "pricePerSqm": 20,
+      "firstSeen": "2026-09-25T20:48:30.383852+00:00",
       "priceValuation": "mittel"
     }
   ]
