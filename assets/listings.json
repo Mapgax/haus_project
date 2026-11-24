@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T08:03:51.015924+00:00",
+  "generatedAt": "2026-11-24T00:16:02.941977+00:00",
   "source": "supabase",
   "references": {
     "ch": {
@@ -44,39 +44,15 @@
   },
   "priceStats": {
     "buy": {
-      "medianPpsqm": 7232,
-      "count": 20
+      "medianPpsqm": 7617,
+      "count": 19
     },
     "rent": {
       "medianPpsqm": 22,
-      "count": 9
+      "count": 8
     }
   },
   "listings": [
-    {
-      "id": "d207ba0d4084ee1439d825e8a95c014ce5a8c31e2a54c4805d06f4e588b37259",
-      "category": "buy",
-      "region": "ch",
-      "currency": "CHF",
-      "source": "RealAdvisor",
-      "title": "Mehrfamilienhaus mit Garten",
-      "propertyType": "Haus",
-      "address": "Mehrfamilienhaus kaufen - 8280 Kreuzlingen Preis auf",
-      "locationLabel": "Kreuzlingen",
-      "priceChf": 840000.0,
-      "priceLabel": "CHF 840'000",
-      "areaSqm": 170.0,
-      "rooms": 7.0,
-      "url": "https://realadvisor.ch/de/kaufen/gebaude/8280-kreuzlingen-ZZ74-RJ2O",
-      "lat": 47.6458,
-      "lon": 9.1804,
-      "distanceKm": 0.0,
-      "geoPrecision": "locality",
-      "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 4941,
-      "firstSeen": "2026-11-17T18:35:08.593264+00:00",
-      "priceValuation": "guenstig"
-    },
     {
       "id": "ff475e0c1fab6bed3c6a23108584827c3bb8500185807dce1e7d7f6868b4d2bc",
       "category": "buy",
@@ -102,26 +78,26 @@
       "priceValuation": "guenstig"
     },
     {
-      "id": "68e518be51692355533809c2bebbc2f1e2e1fe03c7c71f0a50e8800176558163",
+      "id": "d207ba0d4084ee1439d825e8a95c014ce5a8c31e2a54c4805d06f4e588b37259",
       "category": "buy",
       "region": "ch",
       "currency": "CHF",
       "source": "RealAdvisor",
-      "title": "Charmantes Einfamilienhaus in Kreuzlingen",
+      "title": "Mehrfamilienhaus mit Garten",
       "propertyType": "Haus",
-      "address": "Einfamilienhaus kaufen - 8280 Kreuzlingen Preis auf",
+      "address": "Mehrfamilienhaus kaufen - 8280 Kreuzlingen Preis auf",
       "locationLabel": "Kreuzlingen",
       "priceChf": 840000.0,
       "priceLabel": "CHF 840'000",
-      "areaSqm": 140.0,
-      "rooms": 5.5,
-      "url": "https://realadvisor.ch/de/kaufen/haus/8280-kreuzlingen-VBG4-ODJ9",
+      "areaSqm": 170.0,
+      "rooms": 7.0,
+      "url": "https://realadvisor.ch/de/kaufen/gebaude/8280-kreuzlingen-ZZ74-RJ2O",
       "lat": 47.6458,
       "lon": 9.1804,
       "distanceKm": 0.0,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 6000,
+      "pricePerSqm": 4941,
       "firstSeen": "2026-11-17T18:35:08.593264+00:00",
       "priceValuation": "guenstig"
     },
@@ -147,7 +123,7 @@
       "qualityNote": null,
       "pricePerSqm": 8333,
       "firstSeen": "2026-10-24T17:43:23.003013+00:00",
-      "priceValuation": "teuer"
+      "priceValuation": "mittel"
     },
     {
       "id": "e53274c9b9f6cb16dd2ed8947ad58433d5d090b8eebf26bda8f37fe874d6d7f3",
@@ -387,7 +363,7 @@
       "qualityNote": null,
       "pricePerSqm": 6615,
       "firstSeen": "2026-09-23T20:42:17.892811+00:00",
-      "priceValuation": "mittel"
+      "priceValuation": "guenstig"
     },
     {
       "id": "e3bb02d5dbfd1aa1065c33e8cceb6e5d9e63ca7208c60270faf06ae6a913e226",
@@ -438,7 +414,7 @@
       "priceValuation": "guenstig"
     },
     {
-      "id": "a3790b261960fc57364ce87575ea135314efbd7e4177851865136346b49d779d",
+      "id": "863205d4e772a32326594ce2767a0250d670e5c53244c64ce0043e669e959930",
       "category": "buy",
       "region": "ch",
       "currency": "CHF",
@@ -451,7 +427,7 @@
       "priceLabel": "CHF 2'090'000",
       "areaSqm": 259.0,
       "rooms": 5.5,
-      "url": "https://realadvisor.ch/de/kaufen/wohnung/8598-bottighofen-8PM5-WZLZ",
+      "url": "https://realadvisor.ch/de/kaufen/wohnung/8598-bottighofen-JDXL-E5XR",
       "lat": 47.6394,
       "lon": 9.2086,
       "distanceKm": 2.23,
@@ -459,7 +435,7 @@
       "qualityNote": null,
       "pricePerSqm": 8069,
       "firstSeen": "2026-10-21T07:50:40.274613+00:00",
-      "priceValuation": "teuer"
+      "priceValuation": "mittel"
     },
     {
       "id": "161550f227dddfcc6525326e33d7951b2c8b3e3c387e056a382664ee8a018534",
@@ -483,7 +459,7 @@
       "qualityNote": null,
       "pricePerSqm": 8214,
       "firstSeen": "2026-09-11T19:59:10.963658+00:00",
-      "priceValuation": "teuer"
+      "priceValuation": "mittel"
     },
     {
       "id": "5b95a4ec7a023932dbf863b89ad48b86450a6cce81e554980a613b3ed068697f",
@@ -702,7 +678,7 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "b2cd8a5d64a1d29f547a61feb5f1db731f119ccd07e509863ea5f072ae60ca39",
+      "id": "c96777256b64df5d3beb07e05617fd8fe35587c993cde1bbb47b765af93c4c9c",
       "category": "buy",
       "region": "ch",
       "currency": "CHF",
@@ -711,8 +687,8 @@
       "propertyType": "Wohnung",
       "address": "Penthouse kaufen - 8274 Tägerwilen Preis auf",
       "locationLabel": "Tägerwilen",
-      "priceChf": 2300000.0,
-      "priceLabel": "CHF 2'300'000",
+      "priceChf": 1950000.0,
+      "priceLabel": "CHF 1'950'000",
       "areaSqm": 256.0,
       "rooms": 5.5,
       "url": "https://realadvisor.ch/de/kaufen/wohnung/8274-tagerwilen-YB62-RXJ2",
@@ -721,9 +697,9 @@
       "distanceKm": 3.88,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 8984,
-      "firstSeen": "2026-11-22T20:03:32.180545+00:00",
-      "priceValuation": "teuer"
+      "pricePerSqm": 7617,
+      "firstSeen": "2026-11-24T00:15:33.722330+00:00",
+      "priceValuation": "mittel"
     },
     {
       "id": "3860769b8b491c362b3116c908e197711be06b5fdc01814c662409eb099a8d2b",
@@ -864,30 +840,6 @@
       "priceValuation": null
     },
     {
-      "id": "ec6edec8cc73fc333690095cf5addd8664ac941cc335d9696df2f3e898c832a0",
-      "category": "rent",
-      "region": "ch",
-      "currency": "CHF",
-      "source": "RealAdvisor",
-      "title": "Charmantes Reihenhaus mit Garten",
-      "propertyType": "Haus",
-      "address": "Paulistrasse 9b, 8280 Kreuzlingen",
-      "locationLabel": "Inseratskoordinaten",
-      "priceChf": 3250.0,
-      "priceLabel": "CHF 3'250",
-      "areaSqm": 145.0,
-      "rooms": 5.5,
-      "url": "https://realadvisor.ch/de/mieten/haus/9b-paulistrasse-8280-kreuzlingen-KQEQ-POL7",
-      "lat": 47.64462,
-      "lon": 9.185029,
-      "distanceKm": 0.37,
-      "geoPrecision": "listing-geo",
-      "qualityNote": null,
-      "pricePerSqm": 22,
-      "firstSeen": "2026-11-17T18:35:08.593264+00:00",
-      "priceValuation": "mittel"
-    },
-    {
       "id": "f9200d52252fee0e704149bd97ab72a22bf119ce6d2f32712f167fc91e2386b4",
       "category": "rent",
       "region": "ch",
@@ -984,7 +936,7 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "098424ce2d6b8d4ebf26e01e4133067fbd301a366c3c7f18e3059387d44c7b56",
+      "id": "c5116eedf80e8d1d9dee37dcb1008385c6dfdd110850da4308c7f8f1920a7cd4",
       "category": "rent",
       "region": "ch",
       "currency": "CHF",
@@ -993,8 +945,8 @@
       "propertyType": "Wohnung",
       "address": "Wohnung mieten - 8598 Bottighofen Preis auf",
       "locationLabel": "Bottighofen",
-      "priceChf": 1750.0,
-      "priceLabel": "CHF 1'750",
+      "priceChf": 1050.0,
+      "priceLabel": "CHF 1'050",
       "areaSqm": 259.0,
       "rooms": 5.5,
       "url": "https://realadvisor.ch/de/mieten/wohnung/8598-bottighofen-VBG4-O6JW",
@@ -1003,8 +955,8 @@
       "distanceKm": 2.23,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 7,
-      "firstSeen": "2026-11-23T08:03:20.929197+00:00",
+      "pricePerSqm": 4,
+      "firstSeen": "2026-11-24T00:15:33.722330+00:00",
       "priceValuation": "guenstig"
     },
     {
@@ -1070,8 +1022,8 @@
       "areaSqm": 170.7,
       "rooms": 6.0,
       "url": "https://realadvisor.ch/de/mieten/haus/3-rickstrasse-8274-tagerwilen-8DN7-G4A7",
-      "lat": 47.655776,
-      "lon": 9.132795,
+      "lat": 47.6557782,
+      "lon": 9.1328626,
       "distanceKm": 3.73,
       "geoPrecision": "listing-geo",
       "qualityNote": null,
