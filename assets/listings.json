@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T10:18:38.618146+00:00",
+  "generatedAt": "2026-11-24T22:46:47.757262+00:00",
   "source": "supabase",
   "references": {
     "ch": {
@@ -44,12 +44,12 @@
   },
   "priceStats": {
     "buy": {
-      "medianPpsqm": 7848,
-      "count": 19
+      "medianPpsqm": 7232,
+      "count": 20
     },
     "rent": {
       "medianPpsqm": 22,
-      "count": 8
+      "count": 9
     }
   },
   "listings": [
@@ -102,6 +102,30 @@
       "priceValuation": "guenstig"
     },
     {
+      "id": "68e518be51692355533809c2bebbc2f1e2e1fe03c7c71f0a50e8800176558163",
+      "category": "buy",
+      "region": "ch",
+      "currency": "CHF",
+      "source": "RealAdvisor",
+      "title": "Charmantes Einfamilienhaus in Kreuzlingen",
+      "propertyType": "Haus",
+      "address": "Einfamilienhaus kaufen - 8280 Kreuzlingen Preis auf",
+      "locationLabel": "Kreuzlingen",
+      "priceChf": 840000.0,
+      "priceLabel": "CHF 840'000",
+      "areaSqm": 140.0,
+      "rooms": 5.5,
+      "url": "https://realadvisor.ch/de/kaufen/haus/8280-kreuzlingen-VBG4-ODJ9",
+      "lat": 47.6458,
+      "lon": 9.1804,
+      "distanceKm": 0.0,
+      "geoPrecision": "locality",
+      "qualityNote": "Preis auf Anfrage im Quelltext",
+      "pricePerSqm": 6000,
+      "firstSeen": "2026-11-17T18:35:08.593264+00:00",
+      "priceValuation": "guenstig"
+    },
+    {
       "id": "90d910cc38407b4fdf65c5b840b36c78e70690ed32da6e8146a7ddeabc28113b",
       "category": "buy",
       "region": "ch",
@@ -123,7 +147,7 @@
       "qualityNote": null,
       "pricePerSqm": 8333,
       "firstSeen": "2026-10-24T17:43:23.003013+00:00",
-      "priceValuation": "mittel"
+      "priceValuation": "teuer"
     },
     {
       "id": "e53274c9b9f6cb16dd2ed8947ad58433d5d090b8eebf26bda8f37fe874d6d7f3",
@@ -246,6 +270,30 @@
       "priceValuation": null
     },
     {
+      "id": "8b5c47bf17dc048df9f1ff7a291ee05084c38d24714e09e7ed9e294f69132507",
+      "category": "buy",
+      "region": "ch",
+      "currency": "CHF",
+      "source": "ImmoStreet Kreuzlingen",
+      "title": "Neubauwohnung mit 147 m² Wohnkomfort für die ganze Familie",
+      "propertyType": "Wohnung",
+      "address": "Adresse auf Anfrage, 8280 Kreuzlingen",
+      "locationLabel": "Inseratskoordinaten",
+      "priceChf": null,
+      "priceLabel": "Auf Anfrage",
+      "areaSqm": 147.0,
+      "rooms": 6.5,
+      "url": "https://www.immoscout24.ch/kaufen/4003575676",
+      "lat": 47.643671700557576,
+      "lon": 9.173247571578198,
+      "distanceKm": 0.59,
+      "geoPrecision": "listing-geo",
+      "qualityNote": "Preis auf Anfrage oder nicht sauber extrahiert",
+      "pricePerSqm": null,
+      "firstSeen": "2026-10-23T17:49:31.620618+00:00",
+      "priceValuation": null
+    },
+    {
       "id": "ac3aaa76e63ef7eb7d88c5005165374965ac6d111608307b339312a6fb9bb65a",
       "category": "buy",
       "region": "ch",
@@ -294,30 +342,6 @@
       "priceValuation": null
     },
     {
-      "id": "8b5c47bf17dc048df9f1ff7a291ee05084c38d24714e09e7ed9e294f69132507",
-      "category": "buy",
-      "region": "ch",
-      "currency": "CHF",
-      "source": "ImmoStreet Kreuzlingen",
-      "title": "Neubauwohnung mit 147 m² Wohnkomfort für die ganze Familie",
-      "propertyType": "Wohnung",
-      "address": "Adresse auf Anfrage, 8280 Kreuzlingen",
-      "locationLabel": "Inseratskoordinaten",
-      "priceChf": null,
-      "priceLabel": "Auf Anfrage",
-      "areaSqm": 147.0,
-      "rooms": 6.5,
-      "url": "https://www.immoscout24.ch/kaufen/4003575676",
-      "lat": 47.643671700557576,
-      "lon": 9.173247571578198,
-      "distanceKm": 0.59,
-      "geoPrecision": "listing-geo",
-      "qualityNote": "Preis auf Anfrage oder nicht sauber extrahiert",
-      "pricePerSqm": null,
-      "firstSeen": "2026-10-23T17:49:31.620618+00:00",
-      "priceValuation": null
-    },
-    {
       "id": "0e1ae6c838529daacb1e8b0318f98891358bc6e011e6c817d7477d8c849362c5",
       "category": "buy",
       "region": "ch",
@@ -363,7 +387,7 @@
       "qualityNote": null,
       "pricePerSqm": 6615,
       "firstSeen": "2026-09-23T20:42:17.892811+00:00",
-      "priceValuation": "guenstig"
+      "priceValuation": "mittel"
     },
     {
       "id": "e3bb02d5dbfd1aa1065c33e8cceb6e5d9e63ca7208c60270faf06ae6a913e226",
@@ -411,7 +435,7 @@
       "qualityNote": null,
       "pricePerSqm": 8069,
       "firstSeen": "2026-10-21T07:50:40.274613+00:00",
-      "priceValuation": "mittel"
+      "priceValuation": "teuer"
     },
     {
       "id": "761fe795e4a18cedfde998f10ced1fd67e9796c334529936f9b5d358e4ac74b6",
@@ -435,7 +459,7 @@
       "qualityNote": null,
       "pricePerSqm": 8214,
       "firstSeen": "2026-09-11T19:59:10.963658+00:00",
-      "priceValuation": "mittel"
+      "priceValuation": "teuer"
     },
     {
       "id": "5b95a4ec7a023932dbf863b89ad48b86450a6cce81e554980a613b3ed068697f",
@@ -534,7 +558,7 @@
       "priceValuation": null
     },
     {
-      "id": "64d5e4491259819feed19efbbde310bec24bd366045e9b0c510bcb3cd23e2bb1",
+      "id": "2dbb1374bf09f49d84075ac982c5ada04af489298e1627873d5319db46d14ecd",
       "category": "buy",
       "region": "ch",
       "currency": "CHF",
@@ -543,8 +567,8 @@
       "propertyType": "Wohnung",
       "address": "Rheinblickstrasse 2g, 8274 Tägerwilen Preis auf",
       "locationLabel": "Inseratskoordinaten",
-      "priceChf": 1950000.0,
-      "priceLabel": "CHF 1'950'000",
+      "priceChf": 1280000.0,
+      "priceLabel": "CHF 1'280'000",
       "areaSqm": 141.0,
       "rooms": 5.5,
       "url": "https://realadvisor.ch/de/kaufen/wohnung/2g-rheinblickstrasse-8274-tagerwilen-Y23R-NED6",
@@ -553,8 +577,8 @@
       "distanceKm": 3.13,
       "geoPrecision": "listing-geo",
       "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 13830,
-      "firstSeen": "2026-11-24T10:18:04.950477+00:00",
+      "pricePerSqm": 9078,
+      "firstSeen": "2026-11-24T22:46:16.813325+00:00",
       "priceValuation": "teuer"
     },
     {
@@ -702,27 +726,27 @@
       "priceValuation": "guenstig"
     },
     {
-      "id": "a25d8441d9780ed35374770e9af312150dbdf24651e2ee668e86a6bd6b2d7c00",
+      "id": "3860769b8b491c362b3116c908e197711be06b5fdc01814c662409eb099a8d2b",
       "category": "buy",
       "region": "ch",
       "currency": "CHF",
       "source": "Lebenswerk (neu)",
       "title": "Viel Platz. Wenig Aufwand. Familienwohnen im Wigärtli, Tägerwilen TG",
-      "propertyType": "Wohnung",
-      "address": "Wigärtli, Tägerwilen TG 8274 Tägerwilen, Maisonettewohnung zum",
+      "propertyType": "Haus",
+      "address": "Wigärtli, Tägerwilen TG 8274 Tägerwilen, Reihenmittelhaus zum",
       "locationLabel": "Tägerwilen",
       "priceChf": null,
       "priceLabel": "Auf Anfrage",
       "areaSqm": 172.0,
       "rooms": 5.5,
-      "url": "https://www.lebenswerk.immo/immobilien/wohnung-eigentumswohnung-maisonettewohnung-in-taegerwilen-kaufen-614/",
+      "url": "https://www.lebenswerk.immo/immobilien/haus-reihenmittelhaus-in-taegerwilen-kaufen-585-1/",
       "lat": 47.6564,
       "lon": 9.1311,
       "distanceKm": 3.88,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage oder nicht sauber extrahiert",
       "pricePerSqm": null,
-      "firstSeen": "2026-10-28T18:46:02.630551+00:00",
+      "firstSeen": "2026-11-05T12:43:24.784181+00:00",
       "priceValuation": null
     },
     {
@@ -840,6 +864,30 @@
       "priceValuation": null
     },
     {
+      "id": "ec6edec8cc73fc333690095cf5addd8664ac941cc335d9696df2f3e898c832a0",
+      "category": "rent",
+      "region": "ch",
+      "currency": "CHF",
+      "source": "RealAdvisor",
+      "title": "Charmantes Reihenhaus mit Garten",
+      "propertyType": "Haus",
+      "address": "Paulistrasse 9b, 8280 Kreuzlingen",
+      "locationLabel": "Inseratskoordinaten",
+      "priceChf": 3250.0,
+      "priceLabel": "CHF 3'250",
+      "areaSqm": 145.0,
+      "rooms": 5.5,
+      "url": "https://realadvisor.ch/de/mieten/haus/9b-paulistrasse-8280-kreuzlingen-KQEQ-POL7",
+      "lat": 47.64462,
+      "lon": 9.185029,
+      "distanceKm": 0.37,
+      "geoPrecision": "listing-geo",
+      "qualityNote": null,
+      "pricePerSqm": 22,
+      "firstSeen": "2026-11-17T18:35:08.593264+00:00",
+      "priceValuation": "mittel"
+    },
+    {
       "id": "f9200d52252fee0e704149bd97ab72a22bf119ce6d2f32712f167fc91e2386b4",
       "category": "rent",
       "region": "ch",
@@ -936,7 +984,7 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "69b29a424596eda8b8da2f0995c6668a0de6677447ffb18e171941fb467e43a4",
+      "id": "153dffeafc28496cf789c472b6190252fe1285421e534570530b6afb33f50c83",
       "category": "rent",
       "region": "ch",
       "currency": "CHF",
@@ -945,8 +993,8 @@
       "propertyType": "Wohnung",
       "address": "Wohnung mieten - 8598 Bottighofen Preis auf",
       "locationLabel": "Bottighofen",
-      "priceChf": 600.0,
-      "priceLabel": "CHF 600",
+      "priceChf": 2420.0,
+      "priceLabel": "CHF 2'420",
       "areaSqm": 259.0,
       "rooms": 5.5,
       "url": "https://realadvisor.ch/de/mieten/wohnung/8598-bottighofen-VBG4-O6JW",
@@ -955,8 +1003,8 @@
       "distanceKm": 2.23,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 2,
-      "firstSeen": "2026-11-24T10:18:04.950477+00:00",
+      "pricePerSqm": 9,
+      "firstSeen": "2026-11-24T22:46:16.813325+00:00",
       "priceValuation": "guenstig"
     },
     {
