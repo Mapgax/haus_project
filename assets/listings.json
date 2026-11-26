@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T22:01:08.089094+00:00",
+  "generatedAt": "2026-11-26T08:52:54.300896+00:00",
   "source": "supabase",
   "references": {
     "ch": {
@@ -44,8 +44,8 @@
   },
   "priceStats": {
     "buy": {
-      "medianPpsqm": 7732,
-      "count": 22
+      "medianPpsqm": 7848,
+      "count": 19
     },
     "rent": {
       "medianPpsqm": 22,
@@ -98,30 +98,6 @@
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
       "pricePerSqm": 3668,
-      "firstSeen": "2026-11-17T18:35:08.593264+00:00",
-      "priceValuation": "guenstig"
-    },
-    {
-      "id": "68e518be51692355533809c2bebbc2f1e2e1fe03c7c71f0a50e8800176558163",
-      "category": "buy",
-      "region": "ch",
-      "currency": "CHF",
-      "source": "RealAdvisor",
-      "title": "Charmantes Einfamilienhaus in Kreuzlingen",
-      "propertyType": "Haus",
-      "address": "Einfamilienhaus kaufen - 8280 Kreuzlingen Preis auf",
-      "locationLabel": "Kreuzlingen",
-      "priceChf": 840000.0,
-      "priceLabel": "CHF 840'000",
-      "areaSqm": 140.0,
-      "rooms": 5.5,
-      "url": "https://realadvisor.ch/de/kaufen/haus/8280-kreuzlingen-VBG4-ODJ9",
-      "lat": 47.6458,
-      "lon": 9.1804,
-      "distanceKm": 0.0,
-      "geoPrecision": "locality",
-      "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 6000,
       "firstSeen": "2026-11-17T18:35:08.593264+00:00",
       "priceValuation": "guenstig"
     },
@@ -388,30 +364,6 @@
       "pricePerSqm": 6615,
       "firstSeen": "2026-09-23T20:42:17.892811+00:00",
       "priceValuation": "guenstig"
-    },
-    {
-      "id": "66256dea2bd85bfc43942157684451e684b725c385fdd7431488890f956bdd96",
-      "category": "buy",
-      "region": "ch",
-      "currency": "CHF",
-      "source": "RealAdvisor",
-      "title": "Renditeliegenschaft mit Gärten",
-      "propertyType": "Haus",
-      "address": "kaufen - 1, 8280 Kreuzlingen",
-      "locationLabel": "Inseratskoordinaten",
-      "priceChf": 2580000.0,
-      "priceLabel": "CHF 2'580'000",
-      "areaSqm": 300.0,
-      "rooms": 10.5,
-      "url": "https://realadvisor.ch/de/kaufen/gebaude/1-8280-kreuzlingen-KQNZ-4XPP",
-      "lat": 47.6368217,
-      "lon": 9.1556172,
-      "distanceKm": 2.11,
-      "geoPrecision": "listing-geo",
-      "qualityNote": null,
-      "pricePerSqm": 8600,
-      "firstSeen": "2026-11-25T09:04:30.762023+00:00",
-      "priceValuation": "teuer"
     },
     {
       "id": "e3bb02d5dbfd1aa1065c33e8cceb6e5d9e63ca7208c60270faf06ae6a913e226",
@@ -750,30 +702,6 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "c96777256b64df5d3beb07e05617fd8fe35587c993cde1bbb47b765af93c4c9c",
-      "category": "buy",
-      "region": "ch",
-      "currency": "CHF",
-      "source": "RealAdvisor Tägerwilen",
-      "title": "Luxuriöse Attikawohnung mit Seesicht",
-      "propertyType": "Wohnung",
-      "address": "Penthouse kaufen - 8274 Tägerwilen Preis auf",
-      "locationLabel": "Tägerwilen",
-      "priceChf": 1950000.0,
-      "priceLabel": "CHF 1'950'000",
-      "areaSqm": 256.0,
-      "rooms": 5.5,
-      "url": "https://realadvisor.ch/de/kaufen/wohnung/8274-tagerwilen-YB62-RXJ2",
-      "lat": 47.6564,
-      "lon": 9.1311,
-      "distanceKm": 3.88,
-      "geoPrecision": "locality",
-      "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 7617,
-      "firstSeen": "2026-11-24T00:15:33.722330+00:00",
-      "priceValuation": "mittel"
-    },
-    {
       "id": "3860769b8b491c362b3116c908e197711be06b5fdc01814c662409eb099a8d2b",
       "category": "buy",
       "region": "ch",
@@ -1032,7 +960,7 @@
       "priceValuation": "teuer"
     },
     {
-      "id": "bd14a2b5817b1c1cb2a71155c425a2dfd3e86089d9f0e00d12551b8d7076e4c7",
+      "id": "f6c6d5b293da782447a6e56d7c824d17ce7cb933321694dfc279ef8b4ebceec7",
       "category": "rent",
       "region": "ch",
       "currency": "CHF",
@@ -1041,8 +969,8 @@
       "propertyType": "Wohnung",
       "address": "Wohnung mieten - 8598 Bottighofen Preis auf",
       "locationLabel": "Bottighofen",
-      "priceChf": 1210.0,
-      "priceLabel": "CHF 1'210",
+      "priceChf": 1884.0,
+      "priceLabel": "CHF 1'884",
       "areaSqm": 259.0,
       "rooms": 5.5,
       "url": "https://realadvisor.ch/de/mieten/wohnung/8598-bottighofen-VBG4-O6JW",
@@ -1051,8 +979,8 @@
       "distanceKm": 2.23,
       "geoPrecision": "locality",
       "qualityNote": "Preis auf Anfrage im Quelltext",
-      "pricePerSqm": 5,
-      "firstSeen": "2026-11-25T22:00:35.184532+00:00",
+      "pricePerSqm": 7,
+      "firstSeen": "2026-11-26T08:52:25.611321+00:00",
       "priceValuation": "guenstig"
     },
     {
